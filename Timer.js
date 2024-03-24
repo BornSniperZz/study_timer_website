@@ -2,33 +2,34 @@ export default class Timer {
   constructor(root) {
     root.innerHTML = Timer.getHTML();
 
-    this.el = {
-      minutes: root.querySelector(".timer__part--minutes"),
-      seconds: root.querySelector(".timer__part--seconds"),
-      control: root.querySelector(".timer__btn--control"),
-      reset: root.querySelector(".timer__btn--reset")
-    };
+      this.el = {
+        minutes: root.querySelector(".timer__part--minutes"),
+        seconds: root.querySelector(".timer__part--seconds"),
+        control: root.querySelector(".timer__btn--control"),
+        reset: root.querySelector(".timer__btn--reset")
+      };
 
-    this.interval = null;
-    this.remainingSeconds = 0;
+      this.interval = null;
+      this.remainingSeconds = 0;
 
-    this.el.control.addEventListener("click", () => {
-      if (this.interval === null) {
-        this.start();
-      } else {
-        this.stop();
-      }
-    });
+      this.el.control.addEventListener("click", () => {
+        if (this.interval === null) {
+          this.start();
+        } else {
+          this.stop();
+        }
+      });
 
-    this.el.reset.addEventListener("click", () => {
-      const inputMinutes = prompt("Enter number of minutes:");
+      this.el.reset.addEventListener("click", () => {
+        const inputMinutes = prompt("Enter number of minutes:");
 
-      if (inputMinutes < 60) {
-        this.stop();
-        this.remainingSeconds = inputMinutes * 60;
-        this.updateInterfaceTime();
-      }
-    });
+        if(inputMinutes < 60) {
+          this.stop();
+          this.remainingSeconds = inputMinutes * 60;
+          this.updateInterfaceTime();
+        }
+      });
+
   }
 
   updateInterfaceTime() {
@@ -63,7 +64,7 @@ export default class Timer {
       }
     }, 1000);
 
-    this.updateInterfaceControls();
+    this.updateInterfaceControls
   }
 
   stop() {
@@ -71,7 +72,7 @@ export default class Timer {
 
     this.interval = null;
 
-    this.updateInterfaceControls();
+    this.updateInterfaceControls;
   }
 
   static getHTML() {
@@ -87,7 +88,7 @@ export default class Timer {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
           <span class="material-symbols-outlined">timer</span>
       </button>
-		`;
+    `;
   }
 }
 
