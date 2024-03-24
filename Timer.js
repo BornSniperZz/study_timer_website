@@ -43,11 +43,11 @@ export default class Timer {
 
   updateInterfaceControls() {
     if (this.interval == null) {
-      this.el.control.innerHTML = `<span class="Material-icons">play_arrow</span>`;
+      this.el.control.innerHTML = `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" /> <span class="material-symbols-outlined">play_arrow</span>`;
       this.el.control.classList.add("timer__btn--start");
       this.el.control.classList.add("timer__btn--stop");
     } else {
-      this.el.control.innerHTML = `<span class="Material-icons">pause</span>`;
+      this.el.control.innerHTML = `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" /> <span class="material-symbols-outlined">pause</span>`;
       this.el.control.classList.add("timer__btn--stop");
       this.el.control.classList.remove("timer__btn--start");
     }
