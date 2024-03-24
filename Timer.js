@@ -1,4 +1,4 @@
-export default class Timer {
+class Timer {
   constructor(root) {
     root.innerHTML = Timer.getHTML();
 
@@ -91,6 +91,10 @@ export default class Timer {
     `;
   }
 }
+
+new Timer(
+	document.querySelector(".timer")
+);
 
 /*
 export default class Timer {
