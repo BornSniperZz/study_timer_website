@@ -9,8 +9,6 @@ export default class Timer {
         reset: root.querySelector(".timer__btn--reset")
       };
 
-      console.log(this.el);
-
       this.interval = null;
       this.remainingSeconds = 0;
 
@@ -39,9 +37,8 @@ export default class Timer {
     const minutes = Math.floor(this.remainingSeconds / 60);
     const seconds = this.remainingSeconds % 60;
 
-    console.log(minutes, seconds);
-    this.el.minutes.textContent = minutes.toString().padStart(2, "0")
-    this.el.seconds.textContent = seconds.toString().padStart(2, "0")
+    this.el.minutes.textContent = minutes.toString().padStart(2, "0");
+    this.el.seconds.textContent = seconds.toString().padStart(2, "0");
   }
 
   updateInterfaceControls() {
