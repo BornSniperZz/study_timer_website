@@ -10,9 +10,11 @@ export default class Timer {
       };
 
       console.log(this.el);
+      console.log("THIS IS JUST A TEST");
     }
 
   static getHTML() {
+    console.log("THIS IS JUST A TEST 2");
     return `
     <span class="timer__part timer__part__minutes">00</span>
     <span class="timer__part">:</span>
