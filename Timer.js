@@ -91,10 +91,6 @@ export default class Timer {
   }
 }
 
-new Timer(
-	document.querySelector(".timer")
-);
-
 /*
 export default class Timer {
     constructor(root) {
