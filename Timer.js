@@ -33,6 +33,8 @@ export default class Timer {
     const seconds = this.remainingSeconds % 60;
 
     console.log(minutes, seconds);
+    this.el.minutes.textContent = minutes.toString().padStart(2, "0")
+    this.el.seconds.textContent = seconds.toString().padStart(2, "0")
   }
 
   static getHTML() {
