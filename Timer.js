@@ -10,11 +10,32 @@ export default class Timer {
       };
 
       console.log(this.el);
-      console.log("THIS IS JUST A TEST");
+
+      this.interval = null;
+      this.remainingSeconds = 90;
+
+      this.updateInterfaceTime();
+
+      this.el.control.addEventListener("clikc", () => {
+        // TODO: add in the code
+
+      })
+
+      this.el.reset.addEventListener("clikc", () => {
+        // TODO: add in the code
+        
+      })
+
     }
 
+  updateInterfaceTime() {
+    const minutes = Math.floor(this.remainingSeconds / 60);
+    const seconds = this.remainingSeconds % 60;
+
+    console.log(minutes, seconds);
+  }
+
   static getHTML() {
-    console.log("THIS IS JUST A TEST 2");
     return `
     <span class="timer__part timer__part__minutes">00</span>
     <span class="timer__part">:</span>
