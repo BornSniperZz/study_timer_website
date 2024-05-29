@@ -1,6 +1,6 @@
-class Timer {
+class timer {
   constructor(root) {
-    root.innerHTML = Timer.getHTML();
+    root.innerHTML = timer.getHTML();
 
     this.el = {
       minutes: root.querySelector(".timer__part--minutes"),
@@ -89,6 +89,6 @@ class Timer {
   }
 }
 
-new Timer(
+new timer(
 	document.querySelector(".timer")
 );
